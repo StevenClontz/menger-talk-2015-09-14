@@ -248,12 +248,44 @@
             <p class="fragment">
               Arhangel'skii proved the following:
             </p>
-            <ul class="fragment">
-              <li>
+            <div class="fragment">
+              <h4>Theorem</h4>
+              <p>
                 \(X\) is \(\Omega M\) if and only if
                 \(C(X)\) is \(CFT\).
-              </li>
+              </p>
             </ul>
+          </section>
+          <section>
+            <h4>Idea of proof</h4>
+            <p>
+              There's a natural corespondance between \(\omega\) covers
+              of completely regular spaces \(X\) and subsets of \(C(X)\)
+              containing \(\mathbf 0\) as a limit point.
+            </p>
+            <p class="fragment">
+              Given an \(\omega\) cover \(\mathcal U\),
+              we may assume it consists of co-zero sets.
+              For \(U\in\mathcal U\), let \(\mathbf x_U\in C(X)\) satisfy
+              \(U=\mathbf x_U^{-1}[(-1,1)]\). It follows
+              \(
+                \mathbf 0
+                  \in
+                cl(\{\frac{1}{2^n}\mathbf x_U:U\in\mathcal U,n&lt;\omega\})
+              \).
+            </p>
+            <p class="fragment">
+              Likewise, given \(\mathbf 0\in cl(B)\), let
+              \(
+                \mathcal U_B
+                  =
+                \{
+                  \mathbf x^{-1}[(-\frac{1}{2^n},\frac{1}{2^n})]
+                :
+                  \mathbf x\in B, n&lt;\omega
+                \}
+              \); it follows \(\mathcal U_B\) is an \(\omega\) cover.
+            </p>
           </section>
           <section>
             <p>
@@ -262,22 +294,13 @@
             <ul>
               <li class="fragment">
                 If \(X\) is \(\sigma\)-compact, then
-                \(C(X)\) is \(CFT^+\).
-              </li>
-            </ul>
-            <p class="fragment">
-              Since \(CFT^+\) implies \(CDFT^+\), any separable subspace of
-              such a \(C(X)\) must be \(SS^+\).
-            </p>
-            <p class="fragment">
-              Actually, it gets better:
-            <p>
-            <ul>
-              <li class="fragment">
-                \(X\) is \(\sigma\)-compact if and only if
                 \(C(X)\) is \(CFT^{+mark}\).
               </li>
             </ul>
+            <p class="fragment">
+              Since \(CFT^{+mark}\) implies \(CDFT^{+mark}\), any separable
+              subspace of such a \(C(X)\) must be \(SS^{+mark}\).
+            </p>
           </section>
           <section>
             <p>
@@ -312,7 +335,7 @@
             </p>
             <p class="fragment">
               Alternately, if given a Markov strategy, let
-              \(X_n = \bigcap_{\mathcal U\in\Omega}\sigma(\mathcal U,n)\).
+              \(X_n = \bigcap_{\mathcal U\in\Omega}\bigcup\sigma(\mathcal U,n)\).
               Since any open cover may be closed under finite unions to obtain
               an \(\omega\) cover, it's not hard to see that \(X_n\) is
               relatively compact, and therefore \(\overline{X_n}\) is compact
@@ -323,18 +346,18 @@
           <section>
             <h2>\(\Omega M\) vs. \(CFT\)</h2>
             <p>
-              So to review:
+              As it turns out, the idea of Arhangel'skii's
+              original result yields all of the following:
             </p>
             <ul>
               <li class="fragment">
                 \(X\) is \(\Omega M\) iff \(C(X)\) is \(CFT\)
               </li>
               <li class="fragment">
-                \(X\) is \(\Omega M^{+mark}\) iff \(C(X)\) is \(CFT^{+mark}\)
+                \(X\) is \(\Omega M^{+}\) iff \(C(X)\) is \(CFT^{+}\)
               </li>
               <li class="fragment">
-                Similarly,
-                \(X\) is \(\Omega M^{+}\) iff \(C(X)\) is \(CFT^{+}\)
+                \(X\) is \(\Omega M^{+mark}\) iff \(C(X)\) is \(CFT^{+mark}\)
               </li>
             </ul>
           </section>
@@ -359,7 +382,7 @@
               So if \(C(\omega_1^\dagger)\) was separable, we'd have a
               \(SS^+\), \(\neg SS^{+mark}\) space...
               <span class="fragment">
-                but it's not, of course.
+                but it's not even ccc.
               </span>
             </p>
             <p class="fragment">
